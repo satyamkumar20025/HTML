@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+        }
+        .statement-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .debit {
+            color: #d9534f;
+        }
+        .credit {
+            color: #5cb85c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bank Transaction Statement</h1>
+        </div>
+        
+        <div class="statement-info">
+            <div>
+                <p><strong>Account Holder:</strong> John Doe</p>
+                <p><strong>Account Number:</strong> 1234567890</p>
+            </div>
+            <div>
+                <p><strong>Period:</strong> Jan 1 - Jan 31, 2024</p>
+                <p><strong>Statement Date:</strong> Feb 1, 2024</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/01/2024</td>
+                    <td>Opening Balance</td>
+                    <td></td>
+                    <td></td>
+                    <td>$5,000.00</td>
+                </tr>
+                <tr>
+                    <td>01/05/2024</td>
+                    <td>Salary Deposit</td>
+                    <td></td>
+                    <td class="credit">$2,500.00</td>
+                    <td>$7,500.00</td>
+                </tr>
+                <tr>
+                    <td>01/10/2024</td>
+                    <td>Electricity Bill</td>
+                    <td class="debit">$150.00</td>
+                    <td></td>
+                    <td>$7,350.00</td>
+                </tr>
+                <tr>
+                    <td>01/15/2024</td>
+                    <td>ATM Withdrawal</td>
+                    <td class="debit">$500.00</td>
+                    <td></td>
+                    <td>$6,850.00</td>
+                </tr>
+                <tr>
+                    <td>01/20/2024</td>
+                    <td>Refund - Online Purchase</td>
+                    <td></td>
+                    <td class="credit">$75.00</td>
+                    <td>$6,925.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
